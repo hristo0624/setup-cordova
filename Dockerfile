@@ -1,4 +1,4 @@
-FROM androidsdk/android-30
+FROM androidsdk/android-31
 
 RUN apt-get update
 RUN apt-get -y install curl gradle
