@@ -1,7 +1,6 @@
-FROM runmymind/docker-android-sdk:alpine-standalone
+FROM androidsdk/android-30
 
-RUN apk update && apk upgrade && \
-    apk add gradle npm && \
+RUN apt update && apt install nodejs npm && \
     npm install -g cordova
 
 COPY entrypoint.sh /usr/src/entrypoint.sh
