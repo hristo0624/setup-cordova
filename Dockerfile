@@ -1,7 +1,7 @@
 FROM androidsdk/android-30
 
 RUN apt-get update
-RUN apt-get -y install curl
+RUN apt-get -y install curl gradle
 RUN curl -sL https://deb.nodesource.com/setup_14.x  | bash -
 RUN apt-get -y install nodejs
 RUN npm install -g cordova
