@@ -1,4 +1,4 @@
-FROM androidsdk/android-31
+FROM cimg/android:2022.09
 
 RUN apt-get update
 RUN apt-get -y install curl gradle
