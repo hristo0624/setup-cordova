@@ -44,6 +44,7 @@ RUN apt-get -y install curl gradle
 RUN curl -sL https://deb.nodesource.com/setup_16.x  | bash -
 RUN apt-get -y install nodejs
 RUN npm install -g cordova@11
+RUN npm install -g zx
 
 COPY entrypoint.sh /usr/src/entrypoint.sh
 
