@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 
 ENV DEBIAN_FRONTEND noninteractive
 
-ARG SDK_VERSION=32.0.0
+ARG SDK_VERSION=31.0.0
 ENV ANDROID_HOME      /opt/android-sdk-linux
 ENV ANDROID_SDK_HOME  ${ANDROID_HOME}
 ENV ANDROID_SDK_ROOT  ${ANDROID_HOME}
@@ -33,8 +33,8 @@ RUN /opt/tools/entrypoint.sh built-in
 RUN /opt/android-sdk-linux/cmdline-tools/tools/bin/sdkmanager "cmdline-tools;latest"
 RUN /opt/android-sdk-linux/cmdline-tools/tools/bin/sdkmanager "build-tools;${SDK_VERSION}"
 RUN /opt/android-sdk-linux/cmdline-tools/tools/bin/sdkmanager "platform-tools"
-RUN /opt/android-sdk-linux/cmdline-tools/tools/bin/sdkmanager "platforms;android-30"
-RUN /opt/android-sdk-linux/cmdline-tools/tools/bin/sdkmanager "system-images;android-30;google_apis;x86_64"
+RUN /opt/android-sdk-linux/cmdline-tools/tools/bin/sdkmanager "platforms;android-31"
+RUN /opt/android-sdk-linux/cmdline-tools/tools/bin/sdkmanager "system-images;android-31;google_apis;x86_64"
 
 CMD /opt/tools/entrypoint.sh built-in
 
